@@ -5,7 +5,7 @@ from flask import Blueprint, flash, redirect, render_template, session, url_for,
 from numpy import double
 from werkzeug.security import generate_password_hash
 from flask_login import login_required, current_user
-from .models import TripData, UserCategory, VenueData, UserCategoryTrip
+from .models import TripData, User, UserCategory, VenueData, UserCategoryTrip
 from . import db
 import requests
 import string
@@ -517,6 +517,7 @@ def route():
                     li.append(str(j)+":00:00")
                 # li.append("16:00:00")
                 Final_hour_list.append(li)
+            # Final_hour_list.append("16:00:00")
             print("Venuw list : " ,venue_List)
             print("Final_hour_list : " ,Final_hour_list)
             current_time = datetime.datetime.now().strftime("%H:%M:%S")
@@ -559,11 +560,11 @@ def route():
             print("msg : ",message)
 
             
-            # mob = current_user.user_mob
-            # user = User.query.filter_by(user_email=form_email).first()
+            
+            # user = User.query.filter_by(user_id=current_user.user_id).first()
+            mob = str(current_user.user_mob)
 
-
-            client.messages.create(to="+917620695744",
+            client.messages.create(to="+91"+mob,
                                 from_="+19853317974",
                                 body=message)
             #print(curent_date)
