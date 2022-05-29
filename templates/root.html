@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+<center>
+   <h1 class="title">
+      This is root/Index page ...
+   </h1>
+
+</br></br>
+
+
+</br>
+
+   <h2>For redirecting to login page, click on this image ...</h2>
+
+   <!-- <h2 class="subtitle">
+      You stumbled on root page, lol ..
+   </h2> -->
+   
+   <!-- Just kidding, click on this image .. -->
+</br></br></br></br>
+   <a href="{{url_for('auth.login')}}"> <img src="{{url_for('static', filename = '/other/oggy.gif')}}" width=528 height=297> </a>
+</center>
+{% endblock %}

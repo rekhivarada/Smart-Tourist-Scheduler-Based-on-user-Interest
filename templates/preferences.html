@@ -1,0 +1,2868 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Preferences</title>
+<style>
+ table, th, td {
+    padding: 10px;
+    font-size: 12.5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    vertical-align:  TOP;
+  }
+
+</style>
+{% endblock %}
+
+{% block body %}
+
+<h1>Preferences</h1>
+
+<script type="text/javascript"></script>
+
+
+<form action="/set_preferences" method="POST">
+
+    <div style="width:200px">
+        <div style="float :left"><button type="submit" class="btn btn-secondary btn-sm" name = "preferences">Submit</button></div> 
+        <div style="float:right"><button type="button" class="btn btn-info" onclick = "window.location.href='{{ url_for( 'main.profile' ) }}'" name="profile">Cancel</button></div>
+    </div>
+
+</br>
+</br>
+</br>
+
+
+
+<table>
+
+    <tr>
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="art_and_entertainment" value="True">
+                <label class="form-check-label">Arts & Entertainment</label>
+            </div>
+        </th>
+        
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat2" name="college_and_university" value="True">
+                <label class="form-check-label">College & University</label>
+            </div>
+        </th>
+
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat3" name="event" value="True">
+                <label class="form-check-label">Event</label>
+            </div>
+        </th>
+
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat4" name="food" value="True">
+                <label class="form-check-label">Food</label>
+            </div>
+        </th>
+
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat5" name="nightlife_spot" value="True">
+                <label class="form-check-label">Nightlife Spot</label>
+            </div>
+        </th>
+
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat6" name="outdoors_and_recreation" value="True">
+                <label class="form-check-label">Outdoors & Recreation</label>
+            </div>
+        </th>
+
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat7" name="professional_and_other_places" value="True">
+                <label class="form-check-label">Professional & Other Places</label>
+            </div>
+        </th>
+
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat8" name="residence" value="True">
+                <label class="form-check-label">Residence</label>
+            </div>
+        </th>
+
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat9" name="shop_and_service" value="True">
+                <label class="form-check-label">Shop & Service</label>
+            </div>
+        </th>
+
+        <th>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat10" name="travel_and_transport" value="True">
+                <label class="form-check-label">Travel & Transport</label>
+            </div>
+        </th>
+
+    </tr>
+
+    
+        <td>
+            
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="amphitheater" value="True">
+                        <label class="form-check-label">Amphitheater</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="aquarium" value="True">
+                        <label class="form-check-label">Aquarium</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="arcade" value="True">
+                        <label class="form-check-label">Arcade</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="art_gallery" value="True">
+                        <label class="form-check-label">Art Gallery</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="bowling_alley" value="True">
+                        <label class="form-check-label">Bowng Alley</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="casino" value="True">
+                        <label class="form-check-label">Casino</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="circus" value="True">
+                        <label class="form-check-label">Circus</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="comedy_club" value="True">
+                        <label class="form-check-label">Comedy Club</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="concert_hall" value="True">
+                        <label class="form-check-label">Concert Hall</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="country_dance_club" value="True">
+                        <label class="form-check-label">Country Dance Club</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="disc_golf" value="True">
+                        <label class="form-check-label">Disc Golf</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="escape_room" value="True">
+                        <label class="form-check-label">Escape Room</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="exhibit" value="True">
+                        <label class="form-check-label">Exhibit</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="general_entertainment" value="True">
+                        <label class="form-check-label">General Entertainment</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="go_kart_track" value="True">
+                        <label class="form-check-label">Go Kart Track</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="historic_site" value="True">
+                        <label class="form-check-label">Historic Site</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="karaoke_boxs" value="True">
+                        <label class="form-check-label">Karaoke Boxs</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="laser_tag" value="True">
+                        <label class="form-check-label">Laser Tag</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="memorial_site" value="True">
+                        <label class="form-check-label">Memorial Site</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="mini_golf" value="True">
+                        <label class="form-check-label">Mini Golf</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="movie_theater" value="True">
+                        <label class="form-check-label">Movie Theater</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="museum" value="True">
+                        <label class="form-check-label">Museum</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="music_venue" value="True">
+                        <label class="form-check-label">Music Venue</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="pachinko_parlor" value="True">
+                        <label class="form-check-label">Pachinko Parlor</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="performing_arts_venue" value="True">
+                        <label class="form-check-label">Performing Arts Venue</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="pool_hall" value="True">
+                        <label class="form-check-label">Pool Hall</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="pubc_art" value="True">
+                        <label class="form-check-label">Pubc Art</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="racecourse" value="True">
+                        <label class="form-check-label">Race Course</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="racetrack" value="True">
+                        <label class="form-check-label">Race Track</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="roller_rink" value="True">
+                        <label class="form-check-label">Roller Rink</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="salsa_club" value="True">
+                        <label class="form-check-label">Salsa Club</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="samba_school" value="True">
+                        <label class="form-check-label">Samba School</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="stadium" value="True">
+                        <label class="form-check-label">Stadium</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="theme_park" value="True">
+                        <label class="form-check-label">Theme Park</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="tour_provider" value="True">
+                        <label class="form-check-label">Tour Provider</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="vr_cafe" value="True">
+                        <label class="form-check-label">VR Cafe</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="water_park" value="True">
+                        <label class="form-check-label">Water Park</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat1" name="zoo" value="True">
+                        <label class="form-check-label">Zoo</label>
+                    </div>
+                </br>
+
+        </td>
+    
+
+        <td>
+            
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_academic_building" value="True">
+                        <label class="form-check-label">College Academic Building</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_administrative_building" value="True">
+                        <label class="form-check-label">College Administrative Building</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_auditorium" value="True">
+                        <label class="form-check-label">College Auditorium</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_bookstore" value="True">
+                        <label class="form-check-label">College Bookstore</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_cafeteria" value="True">
+                        <label class="form-check-label">College Cafeteria</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_classroom" value="True">
+                        <label class="form-check-label">College Classroom</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_gym" value="True">
+                        <label class="form-check-label">College Gym</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_lab" value="True">
+                        <label class="form-check-label">College Lab</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_brary" value="True">
+                        <label class="form-check-label">College brary</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_quad" value="True">
+                        <label class="form-check-label">College Quad</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_rec_center" value="True">
+                        <label class="form-check-label">College Rec Center</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_residence_hall" value="True">
+                        <label class="form-check-label">College Residence Hall</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_stadium" value="True">
+                        <label class="form-check-label">College Stadium</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="college_theater" value="True">
+                        <label class="form-check-label">College Theater</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="community_college" value="True">
+                        <label class="form-check-label">Community College</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="fraternity_house" value="True">
+                        <label class="form-check-label">Fraternity House</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="general_college_and_university" value="True">
+                        <label class="form-check-label">General College And University</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="law_school" value="True">
+                        <label class="form-check-label">Law School</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="medical_school" value="True">
+                        <label class="form-check-label">Medical School</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="sorority_house" value="True">
+                        <label class="form-check-label">Sorority House</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="student_center" value="True">
+                        <label class="form-check-label">Student Center</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="trade_school" value="True">
+                        <label class="form-check-label">Trade School</label>
+                    </div>
+                </br>
+
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cat12" name="university" value="True">
+                        <label class="form-check-label">University</label>
+                    </div>
+                </br>
+        </td>
+
+
+
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="christmas_market" value="True">
+                <label class="form-check-label">Christmas Market</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="conference" value="True">
+                <label class="form-check-label">Conference</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="convention" value="True">
+                <label class="form-check-label">Convention</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="festival" value="True">
+                <label class="form-check-label">Festival</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="line_or_queue" value="True">
+                <label class="form-check-label">Line / Queue</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="music_festival" value="True">
+                <label class="form-check-label">Music Festival</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="other_event" value="True">
+                <label class="form-check-label">Other Event</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="parade" value="True">
+                <label class="form-check-label">Parade</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="sporting_event" value="True">
+                <label class="form-check-label">Sporting Event</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="stoop_sale" value="True">
+                <label class="form-check-label">Stoop Sale</label>
+            </div>
+            </br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="street_fair" value="True">
+                <label class="form-check-label">Street Fair</label>
+            </div>
+            </br>
+            
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" name="trade_fair" value="True">
+                <label class="form-check-label">Trade Fair</label>
+            </div>
+            </br>
+        </td>
+        
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="afghan_restaurant" value="True">
+                <label class="form-check-label">Afghan Restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="african_restaurant" value="True">
+                <label class="form-check-label">African Restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="american_restaurant" value="True">
+                <label class="form-check-label">American Restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="armenian_restaurant" value="True">
+                <label class="form-check-label">Armenian Restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="asian_restaurant" value="True">
+                <label class="form-check-label">Asian Restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="australian_restaurant" value="True">
+                <label class="form-check-label">Australian Restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="austrian_restaurant" value="True">
+                <label class="form-check-label">Austrian Restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="bbq_joint" value="True">
+                <label class="form-check-label">BBQ Joint</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="bagel_shop" value="True">
+                <label class="form-check-label">Bagel Shop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="bakery" value="True">
+                <label class="form-check-label">Bakery</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="bangladeshi_restaurant" value="True">
+                <label class="form-check-label">bangladeshi_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="belgian_restaurant" value="True">
+                <label class="form-check-label">belgian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="bistro" value="True">
+                <label class="form-check-label">bistro</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="breakfast_spot" value="True">
+                <label class="form-check-label">breakfast_spot</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="bubble_tea_shop" value="True">
+                <label class="form-check-label">bubble_tea_shop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="buffet" value="True">
+                <label class="form-check-label">buffet</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="burger_joint" value="True">
+                <label class="form-check-label">burger_joint</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="cafeteria" value="True">
+                <label class="form-check-label">cafeteria</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="café" value="True">
+                <label class="form-check-label">Café</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="cajun_or_creole_restaurant" value="True">
+                <label class="form-check-label">cajun_or_creole_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="caribbean_restaurant" value="True">
+                <label class="form-check-label">caribbean_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="caucasian_restaurant" value="True">
+                <label class="form-check-label">caucasian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="coffee_shop" value="True">
+                <label class="form-check-label">coffee_shop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="comfort_food_restaurant" value="True">
+                <label class="form-check-label">comfort_food_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="creperie" value="True">
+                <label class="form-check-label">creperie</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="czech_restaurant" value="True">
+                <label class="form-check-label">czech_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="deli_or_bodega" value="True">
+                <label class="form-check-label">deli_or_bodega</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="dessert_shop" value="True">
+                <label class="form-check-label">dessert_shop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="diner" value="True">
+                <label class="form-check-label">diner</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="donut_shop" value="True">
+                <label class="form-check-label">donut_shop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="dumpling_restaurant" value="True">
+                <label class="form-check-label">dumpling_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="dutch_restaurant" value="True">
+                <label class="form-check-label">dutch_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="eastern_european_restaurant" value="True">
+                <label class="form-check-label">eastern_european_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="english_restaurant" value="True">
+                <label class="form-check-label">english_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="falafel_restaurant" value="True">
+                <label class="form-check-label">falafel_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="fast_food_restaurant" value="True">
+                <label class="form-check-label">fast_food_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="fish_and_chips_shop" value="True">
+                <label class="form-check-label">fish_and_chips_shop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="fondue_restaurant" value="True">
+                <label class="form-check-label">fondue_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="food_court" value="True">
+                <label class="form-check-label">food_court</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="food_stand" value="True">
+                <label class="form-check-label">food_stand</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="food_truck" value="True">
+                <label class="form-check-label">food_truck</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="french_restaurant" value="True">
+                <label class="form-check-label">french_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="fried_chicken_joint" value="True">
+                <label class="form-check-label">fried_chicken_joint</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="friterie" value="True">
+                <label class="form-check-label">friterie</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="gastropub" value="True">
+                <label class="form-check-label">gastropub</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="german_restaurant" value="True">
+                <label class="form-check-label">german_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="gluten_free_restaurant" value="True">
+                <label class="form-check-label">gluten_free_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="greek_restaurant" value="True">
+                <label class="form-check-label">greek_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="halal_restaurant" value="True">
+                <label class="form-check-label">halal_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="hawaiian_restaurant" value="True">
+                <label class="form-check-label">hawaiian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="hot_dog_joint" value="True">
+                <label class="form-check-label">hot_dog_joint</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="hungarian_restaurant" value="True">
+                <label class="form-check-label">hungarian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="indian_restaurant" value="True">
+                <label class="form-check-label">indian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="irish_pub" value="True">
+                <label class="form-check-label">irish_pub</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="italian_restaurant" value="True">
+                <label class="form-check-label">italian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="jewish_restaurant" value="True">
+                <label class="form-check-label">jewish_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="juice_bar" value="True">
+                <label class="form-check-label">juice_bar</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="kebab_restaurant" value="True">
+                <label class="form-check-label">kebab_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="latin_american_restaurant" value="True">
+                <label class="form-check-label">latin_american_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="mac_and_cheese_joint" value="True">
+                <label class="form-check-label">mac_and_cheese_joint</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="mediterranean_restaurant" value="True">
+                <label class="form-check-label">mediterranean_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="mexican_restaurant" value="True">
+                <label class="form-check-label">mexican_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="middle_eastern_restaurant" value="True">
+                <label class="form-check-label">middle_eastern_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="modern_european_restaurant" value="True">
+                <label class="form-check-label">modern_european_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="molecular_gastronomy_restaurant" value="True">
+                <label class="form-check-label">molecular_gastronomy_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="pakistani_restaurant" value="True">
+                <label class="form-check-label">pakistani_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="pet_café" value="True">
+                <label class="form-check-label">Pet Café</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="pizza_place" value="True">
+                <label class="form-check-label">pizza_place</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="polish_restaurant" value="True">
+                <label class="form-check-label">polish_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="portuguese_restaurant" value="True">
+                <label class="form-check-label">portuguese_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="poutine_place" value="True">
+                <label class="form-check-label">poutine_place</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="restaurant" value="True">
+                <label class="form-check-label">restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="russian_restaurant" value="True">
+                <label class="form-check-label">russian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="salad_place" value="True">
+                <label class="form-check-label">salad_place</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="sandwich_place" value="True">
+                <label class="form-check-label">sandwich_place</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="scandinavian_restaurant" value="True">
+                <label class="form-check-label">scandinavian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="scottish_restaurant" value="True">
+                <label class="form-check-label">scottish_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="seafood_restaurant" value="True">
+                <label class="form-check-label">seafood_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="slovak_restaurant" value="True">
+                <label class="form-check-label">slovak_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="snack_place" value="True">
+                <label class="form-check-label">snack_place</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="soup_place" value="True">
+                <label class="form-check-label">soup_place</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="southern_or_soul_food_restaurant" value="True">
+                <label class="form-check-label">southern_or_soul_food_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="spanish_restaurant" value="True">
+                <label class="form-check-label">spanish_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="sri_lankan_restaurant" value="True">
+                <label class="form-check-label">sri_lankan_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="steakhouse" value="True">
+                <label class="form-check-label">steakhouse</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="swiss_restaurant" value="True">
+                <label class="form-check-label">swiss_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="tea_room" value="True">
+                <label class="form-check-label">tea_room</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="theme_restaurant" value="True">
+                <label class="form-check-label">theme_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="turkish_restaurant" value="True">
+                <label class="form-check-label">turkish_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="ukrainian_restaurant" value="True">
+                <label class="form-check-label">ukrainian_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="vegetarian_or_vegan_restaurant" value="True">
+                <label class="form-check-label">vegetarian_or_vegan_restaurant</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  name="wings_joint" value="True">
+                <label class="form-check-label">wings_joint</label>
+            </div>
+            <br>
+        </td>
+
+
+
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat44" name="bar" value="True">
+                <label class="form-check-label">Bar</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat44" name="brewery" value="True">
+                <label class="form-check-label">Brewery</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat44" name="lounge" value="True">
+                <label class="form-check-label">Lounge</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat44" name="night_market" value="True">
+                <label class="form-check-label">Night Market</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat44" name="nightclub" value="True">
+                <label class="form-check-label">Nightclub</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat44" name="other_nightlife" value="True">
+                <label class="form-check-label">Other Nightlife</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat44" name="strip_club" value="True">
+                <label class="form-check-label">Strip Club</label>
+            </div>
+            <br>
+        </td>
+
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="athletics_and_sports" value="True">
+                <label class="form-check-label">Athletics & Sports</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="bathing_area" value="True">
+                <label class="form-check-label">Bathing Area</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="bay" value="True">
+                <label class="form-check-label">Bay</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="beach" value="True">
+                <label class="form-check-label">Beach</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="bike_trail" value="True">
+                <label class="form-check-label">Bike Trail</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="boat_launch" value="True">
+                <label class="form-check-label">Boat Launch</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="botanical_garden" value="True">
+                <label class="form-check-label">botanical_garden</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="bridge" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+        </td>
+
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="animal_shelter" value="True">
+                <label class="form-check-label">animal_shelter</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="architecture_firm" value="True">
+                <label class="form-check-label">architecture_firm</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="art_studio" value="True">
+                <label class="form-check-label">art_studio</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="auditorium" value="True">
+                <label class="form-check-label">auditorium</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="building" value="True">
+                <label class="form-check-label">building</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="business_center" value="True">
+                <label class="form-check-label">business_center</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="cidery" value="True">
+                <label class="form-check-label">cidery</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+        </td>
+
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="assisted_living" value="True">
+                <label class="form-check-label">Assisted Living</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="home_private" value="True">
+                <label class="form-check-label">Home (Private)</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="housing_development" value="True">
+                <label class="form-check-label">Housing Development</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="residential_building_apartment_or_condo" value="True">
+                <label class="form-check-label">Residential Building (Apartment/Condo)</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="trailer_park" value="True">
+                <label class="form-check-label">Trailer Park</label>
+            </div>
+            <br>
+
+        </td>
+        
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="atm" value="True">
+                <label class="form-check-label">ATM</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="adult_boutique" value="True">
+                <label class="form-check-label">adult_boutique</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="antique_shop" value="True">
+                <label class="form-check-label">antique_shop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="arts_and_crafts_store" value="True">
+                <label class="form-check-label">arts_and_crafts_store</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="astrologer" value="True">
+                <label class="form-check-label">astrologer</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="auto_dealership" value="True">
+                <label class="form-check-label">auto_dealership</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="auto_garage" value="True">
+                <label class="form-check-label">auto_garage</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="auto_workshop" value="True">
+                <label class="form-check-label">auto_workshop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="automotive_shop" value="True">
+                <label class="form-check-label">automotive_shop</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="baby_store" value="True">
+                <label class="form-check-label">baby_store</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+        </td>
+        
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="airport" value="True">
+                <label class="form-check-label">Airport</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="baggage_locker" value="True">
+                <label class="form-check-label">Baggage Locker</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="bike_rental_or_bike_share" value="True">
+                <label class="form-check-label">Bike Rental/Bike Share</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="boat_rental" value="True">
+                <label class="form-check-label">Boat Rental</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="boat_or_ferry" value="True">
+                <label class="form-check-label">Boat / Ferry</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="border_crossing" value="True">
+                <label class="form-check-label">Border Crossing</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="bus_station" value="True">
+                <label class="form-check-label">Bus Station</label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" value="True">
+                <label class="form-check-label"></label>
+            </div>
+        </td>
+    
+    </tr>
+
+
+
+</table>
+
+
+
+</form>
+
+
+{% endblock %}
+
+
+
+
+<!-- 
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" id="cat1" name="" value="True">
+    <label class="form-check-label"></label>
+</div> -->
+
+

@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Booking Page</title>
+<style>
+   /*************************/
+   /*    Styling  Header    */
+   /*************************/
+   header {
+   overflow: hidden;
+   }
+   #top-header {
+   text-align: center;
+   height: 60px;
+   }
+   /****************/
+   /* Styling Logo */
+   /****************/
+   #logo {
+   padding: 30px;
+   margin: -20px;
+   height: 80px;
+   width: 40%;
+   }
+   #logo img {
+   width: 60%;
+   margin: -20px;
+   float: left;
+   padding: 10px 0px;
+   }
+   /***************************/
+   /* Styling Navigation Menu */
+   /***************************/
+   #menu {
+   float: right;
+   width: 70%;
+   height: 100%;
+   margin: -30px;
+   }
+   #menu ul {
+   text-align: center;
+   float: right;
+   margin: -50px;
+   margin-right: 30px;
+   padding-right: 30px;
+   background: #1C2B5B;
+   }
+   #menu li {
+   display: inline-block;
+   padding: none;
+   margin: none;
+   }
+   #menu li a,
+   #menu li span {
+   display: inline-block;
+   padding: 0em 1.5em;
+   text-decoration: none;
+   font-weight: 600;
+   text-transform: uppercase;
+   line-height: 60px;
+   }
+   #menu li a {
+   color: #FFF;
+   }
+   #menu li:hover a,
+   #menu li span {
+   background: #FFF;
+   color: #0074D9;
+   border-left: 1px solid #0074D9;
+   text-decoration: none;
+   }
+
+   footer {
+   text-align: center;
+   padding: 5px;
+   background-color: Grey;
+   color: black;
+   margin-top: 50px;
+   }
+
+   .train {
+        border:3px solid black;
+        border-radius: 7px;
+        border-color: black;
+        height: auto;
+        width: 50px;
+        padding: 10px;
+        background-color:white;
+        
+    }
+    .flight {
+        border:3px solid black;
+        border-radius: 7px;
+        border-color: black;
+        height: auto;
+        width: 50px;
+        padding: 10px;
+        background-color:white;
+
+    }
+    .lodging {
+        border:3px solid black;
+        border-radius: 7px;
+        border-color: black;
+        height: auto;
+        width: 50px;
+        padding: 10px;
+        background-color:white;
+
+    }
+    .bus {
+        border:3px solid black;
+        border-radius: 7px;
+        border-color: black;
+        height: auto;
+        width: 50px;
+        padding: 10px;
+        background-color:white;
+
+    }
+    .movie {
+        border:3px solid black;
+        border-radius: 7px;
+        border-color: black;
+        height: auto;
+        width: 50px;
+        padding: 10px;
+        background-color:white;
+    }
+    .food {
+        border:3px solid black;
+        border-radius: 7px;
+        border-color: black;
+        height: auto;
+        width: 50px;
+        padding: 10px;
+        background-color:white;
+
+    }
+    .cab {
+        border:3px solid black;
+        border-radius: 7px;
+        border-color: black;
+        height: auto;
+        width: 50px;
+        padding: 10px;
+        background-color:white;
+
+    }
+    .main{
+        display:table-row;
+
+       
+    }
+    
+
+
+    h1.heading {
+        color:rgb(29, 9, 104);
+        align-items: center;
+        margin: 100px;
+        font-size: 40px;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<!-- Navbar -->
+<div id="top-header">
+   <!-- Logo -->
+   <div id="logo">
+      <img src="{{url_for('static', filename = 'logo/logofinal.png')}}" />
+   </div>
+   <!-- Navigation bar -->
+   <nav>
+      <div id="menu">
+         <ul>
+            <li class="active"><a href="{{url_for('main.home')}}">Home</a></li>
+            <li><a href="{{url_for('main.get_trip_data')}}">Schedule</a></li>
+            <li><a href="{{url_for('main.booking')}}">booking</a></li>
+            <li><a href="{{url_for('main.profile')}}">Profile</a></li>
+            <li><a href="{{url_for('main.about_us')}}">About Us</a></li>
+            <li><a href="{{url_for('auth.logout')}}">Log out</a></li>
+         </ul>
+      </div>
+   </nav>
+</div>
+
+
+<h1>Booking page</h1>
+<hr>
+
+         <br><br><br>
+
+
+<h1 align="center" class="heading">MAKE YOUR JOURNEY EASY BY USING THESE BOOKING LINKS</h1>
+
+<br><br><br>
+
+        <div class="main" style="width: 100%; display: table;" >
+            <div style="display: table-row; height: 100px;">
+               
+        <div class="train" align="center" style="width: 10%; display: table-cell;">
+            <a href="https://www.irctc.co.in/nget/train-search" target="_blank"><img src="{{url_for('static', filename = 'logo/train.png')}}" alt="online train booking" height="50" width="50"></a><br>
+            Train
+        </div><br>
+        <div class="flight" align="center" style="width: 10%; display: table-cell;">
+            <a href="https://www.farecompare.com/flights/Ata-I3/airline.html?utm_source=google&utm_medium=cpc&utm_campaign=dsa_in&utm_term=&gclid=CjwKCAjwsJ6TBhAIEiwAfl4TWO9xoPXofq078nDBa5ve9wP4cI8KxJudZFdwraYIq3V_2oLMN9jwURoCOCgQAvD_BwE#quote?quoteKey=CBOM*20220517R20220524P1CTF" target="_blank"><img src="{{url_for('static', filename = 'logo/airplane.png')}}" height="50" width="50"></a><br>
+            Flight
+        </div><br>
+        <div class="lodging" align="center" style="width: 10%; display: table-cell;">
+            <a href="https://www.trivago.in/en-IN/lm?__wr=21&tc=18&themeId=115&sem_keyword=hotel%20book&sem_creativeid=590504156791&sem_matchtype=b&sem_network=g&sem_device=c&sem_placement=&sem_target=&sem_adposition=&sem_param1=&sem_param2=&sem_campaignid=11541397106&sem_adgroupid=116149168687&sem_targetid=kwd-17305660&sem_location=9299348&cipc=sem&cip=9119000439&gclid=CjwKCAjwsJ6TBhAIEiwAfl4TWEnGp5rFAxnulf1YW3D7_GCPbta5c44AAw4ttIKpNUdLV-6Sd-G7whoCCcMQAvD_BwE&search=200-64981" target="_blank"><img src="{{url_for('static', filename = 'logo/hotel.png')}}" height="50" width="50"></a><br>
+            Lodging
+        </div><br>
+        <div class="bus" align="center" style="width: 10%; display: table-cell;">
+            <a href="https://www.redbus.in/bus-tickets" target="_blank"><img src="{{url_for('static', filename = 'logo/bus.png')}}" height="50" width="50"></a><br>
+            Bus
+        </div><br>
+        <div class="cab" align="center" style="width: 10%; display: table-cell;">
+            <a href="https://book.olacabs.com/" target="_blank"><img src="{{url_for('static', filename = 'logo/cab.png')}}" height="50" width="50"></a><br>
+            Rental Cars
+        </div><br>
+        <div class="movie" align="center" style="width: 10%; display: table-cell;">
+            <a href="https://in.bookmyshow.com/" target="_blank"><img src="{{url_for('static', filename = 'logo/movie.png')}}" height="50" width="50"></a><br>
+            Movie
+        </div><br>
+        <div class="food" align="center" style="width: 10%; display: table-cell;">
+            <a href="https://www.zomato.com/" target="_blank"><img src="{{url_for('static', filename = 'logo/food.png')}}" height="50" width="50"></a><br>
+            Food
+        </div>
+
+      </div>
+   </div>
+
+        <br><br><br>
+        <br><br><br>
+<footer>
+   <b>All rights reserved | Terms and Conditions | Privacy Policy</b>
+</footer>
+{% endblock %}

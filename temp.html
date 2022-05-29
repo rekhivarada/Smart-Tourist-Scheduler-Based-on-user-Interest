@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        $(function() {
+            {% for match in upcoming_matches %}
+                var match_date_{{ match.id }} = new Date({{ match.start_date }}).getTime();
+                $('#matchCountdown_{{ match.id }}').countdown({until: match_date_{{ match.id }});
+            {% endfor %}
+        });
+    </script>
+</head>
+
+<body>
+    <h1>hello there</h1>
+<div id="googleMap" style="width:500px;height:380px;"></div>
+</body>
+</html>
+
+
+
+
+

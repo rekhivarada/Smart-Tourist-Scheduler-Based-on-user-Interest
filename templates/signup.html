@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Sign Up Page</title>
+<style>
+   body {
+   background-image: url("static//background/main/img3.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   }
+   h1 {
+   color: white;
+   font-family: all;
+   font-size: 220%;
+   text-shadow: 2px 2px 4px #000000;
+   }
+   p {
+   font-size: 160%;
+   color: white;
+   }
+   textarea {
+   resize: none;
+   }
+   form {
+   background-color: transparent;
+   padding: 60px;
+   padding-left: 70px;
+   padding-right: 70px;
+   padding-top: 10px;
+   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+   display: inline-block;
+   margin-left: -700px;
+   margin-top: 30px;
+   text-align: left;
+   border-radius: 20px;
+   }
+   div {
+   display: block;
+   text-align: center;
+   }
+   button {
+   background-color: #1C2B5B;
+   border: none;
+   color: white;
+   padding: 10px 24px;
+   border-radius: 12px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   border: 2px;
+   }
+   label {
+   color: #1C2B5B;
+   font-size: 20;
+   }
+   a {
+   color: #1C2B5B;
+   text-align: center;
+   }
+   input {
+   border-radius: 7px;
+   width: 200px;
+   height: 35px;
+   margin-top: 10px;
+   }
+   h1 {
+   color: #1C2B5B;
+   text-align: center;
+   font-size: 40px;
+   text-shadow: currentColor;
+   }
+   h4 {
+   color: #1C2B5B;
+   text-align: center;
+   }
+   .logo {
+   height: 100px;
+   width: 30%;
+   margin-left: 30px
+   }
+   .google {
+   height: 40px;
+   width: 40px;
+   }
+</style>
+{% endblock %}
+{% block body %}
+<img src=" {{url_for('static', filename = '/logo/logofinal.png')}}" class="logo">
+<div>
+   {% with messages = get_flashed_messages() %}
+   {% if messages %}
+   <div class="notification is-danger">
+      {{ messages[0] }}. Go to <a href="{{ url_for('auth.login') }}">login page</a>.
+   </div>
+   {% endif %}
+   {% endwith %}
+   <form action="/signup" method="POST">
+      <h1>Sign Up</h1>
+      <label for="first_name"><b>First Name</b></label><br>
+      <input type="text" placeholder="First Name" name="input_firstname" id="first_name" required autocomplete="off"><br><br>
+      <label for="last_name"><b>Last Name</b></label><br>
+      <input type="text" placeholder="Last Name" name="input_lastname" id="last_name" required autocomplete="off"> <br><br> 
+      <label for="email"><b>Email Id</b></label><br>
+      <input type="email" placeholder="Email Id" name="input_email" id="email" required autocomplete="off"><br><br>
+      <label for="password"><b>Password</b></label><br>
+      <input type="password" placeholder="Password" name="input_password"></br><br> 
+      <div align="center">
+         <button type="submit" class="RegisterButton" name="submit" id="signup">Sign Up</button><br><br><br> 
+         <a href="{{url_for('auth.login')}}">Back to login</a>
+      </div>
+   </form>
+</div>
+{% endblock %}

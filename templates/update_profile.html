@@ -1,0 +1,168 @@
+{% extends 'base.html' %} {% block head %}
+<title>Update Profile</title>
+<style>
+   /*************************/
+   /*    Styling  Header    */
+   /*************************/
+   header {
+   overflow: hidden;
+   }
+   #top-header {
+   text-align: center;
+   height: 60px;
+   }
+   /****************/
+   /* Styling Logo */
+   /****************/
+   #logo {
+   padding: 30px;
+   margin: -20px;
+   height: 80px;
+   width: 40%;
+   }
+   #logo img {
+   width: 60%;
+   margin: -20px;
+   float: left;
+   padding: 10px 0px;
+   }
+   /***************************/
+   /* Styling Navigation Menu */
+   /***************************/
+   #menu {
+   float: right;
+   width: 70%;
+   height: 100%;
+   margin: -30px;
+   }
+   #menu ul {
+   text-align: center;
+   float: right;
+   margin: -50px;
+   margin-right: 30px;
+   padding-right: 30px;
+   background: #1c2b5b;
+   }
+   #menu li {
+   display: inline-block;
+   padding: none;
+   margin: none;
+   }
+   #menu li a,
+   #menu li span {
+   display: inline-block;
+   padding: 0em 1.5em;
+   text-decoration: none;
+   font-weight: 600;
+   text-transform: uppercase;
+   line-height: 60px;
+   }
+   #menu li a {
+   color: #fff;
+   }
+   #menu li:hover a,
+   #menu li span {
+   background: #fff;
+   color: #0074d9;
+   border-left: 1px solid #0074d9;
+   text-decoration: none;
+   }
+   h5 {
+   font-size: 10;
+   }
+   th, td {
+   padding: 14px;
+   font-size: 30px;;
+   }
+   .creds{
+   background-color: #c3e4d2;
+   }
+   .creds_data{
+   background-color: #f5e9c3;
+   }
+   input {
+   border-radius: 10px;
+   width: 200px;
+   height: 33px;
+   margin-top: 10px;
+   }
+   footer {
+   text-align: center;
+   padding: 5px;
+   background-color: Grey;
+   color: black;
+   margin-top: 50px;
+   }
+</style>
+{% endblock %} {% block body %}
+<!-- Navbar -->
+<div id="top-header">
+   <!-- Logo -->
+   <div id="logo">
+      <img src="{{url_for('static', filename = 'logo/logofinal.png')}}" />
+   </div>
+   <!-- Navigation bar -->
+   <nav>
+      <div id="menu">
+         <ul>
+            <li class="active"><a href="{{url_for('main.home')}}">Home</a></li>
+            <li><a href="{{url_for('main.get_trip_data')}}">Schedule</a></li>
+            <li><a href="{{url_for('main.booking')}}">booking</a></li>
+            <li><a href="{{url_for('main.profile')}}">Profile</a></li>
+            <li><a href="{{url_for('main.about_us')}}">About Us</a></li>
+            <li><a href="{{url_for('auth.logout')}}">Log out</a></li>
+         </ul>
+      </div>
+   </nav>
+</div>
+<h1>Update Profile</h1>
+</br>
+<hr>
+</br>
+<form action="/update_profile" method="POST">
+   <table class="left" style="width:900px">
+      <tr>
+         <td class="creds">First Name</td>
+         <td class="creds_data"><input type="text"  placeholder="{{user_firstname}}" value={{user_firstname}} name="input_firstname" id="input_firstname" required autocomplete="off"></td>
+      </tr>
+      <tr>
+         <td class="creds">Last Name</td>
+         <td class="creds_data"><input type="text"  placeholder="{{user_lastname}}" value={{user_lastname}} name="input_lastname" id="input_lastname" required autocomplete="off"></td>
+      </tr>
+      <tr>
+         <td class="creds">E-Mail</td>
+         <td class="creds_data"><input type="email"  placeholder="{{user_email}}" value={{user_email}} name="input_email" id="input_email" required autocomplete="off"></td>
+      </tr>
+      <tr>
+         <td class="creds">Mobile No.</td>
+         <td class="creds_data"><input type="number"  placeholder="+91 {{user_mob}}" value={{user_mob}} name="input_mob" id="input_mob" required autocomplete="off"></td>
+      </tr>
+      <tr>
+         <td class="creds">Sex</td>
+         <td class="creds_data">
+            <input type="radio" id="male" name="input_sex" value="Male"> Male </br>
+            <input type="radio" id="female" name="input_sex" value="Female"> Female </br>
+            <input type="radio" id="transgender" name="input_sex" value="Transgender"> Transgender </br>
+            <input type="radio" id="other" name="input_sex" value="Other"> Other </br>
+         </td>
+      </tr>
+      
+   </table>
+   </br>
+   </br>
+   {% with messages = get_flashed_messages() %}
+   {% if messages %}
+   <div class="notification is-danger">
+      {{ messages[0] }}
+   </div>
+   {% endif %}
+   {% endwith %}
+   </br>
+   <button type="submit" class="btn btn-secondary btn-sm" name="update_profile" id="update_profile">Update</button>
+</form>
+
+</hr>
+<footer>
+   <b>All rights reserved | Terms and Conditions | Privacy Policy</b>
+</footer>
+{% endblock %}

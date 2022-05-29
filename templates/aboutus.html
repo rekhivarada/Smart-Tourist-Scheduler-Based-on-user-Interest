@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% block head %} 
+<title>Aboutus Page</title>
+</head>
+<style>
+   /*************************/
+   /*    Styling  Header    */
+   /*************************/
+   header {
+   overflow: hidden;
+   }
+   #top-header {
+   text-align: center;
+   height: 60px;
+   }
+   /****************/
+   /* Styling Logo */
+   /****************/
+   #logo {
+   padding: 30px;
+   margin: -20px;
+   height: 80px;
+   width: 40%;
+   }
+   #logo img {
+   width: 60%;
+   margin: -20px;
+   float: left;
+   padding: 10px 0px;
+   }
+   /***************************/
+   /* Styling Navigation Menu */
+   /***************************/
+   #menu {
+   float: right;
+   width: 70%;
+   height: 100%;
+   margin: -30px;
+   }
+   #menu ul {
+   text-align: center;
+   float: right;
+   margin: -50px;
+   margin-right: 30px;
+   padding-right: 30px;
+   background: #1C2B5B;
+   }
+   #menu li {
+   display: inline-block;
+   padding: none;
+   margin: none;
+   }
+   #menu li a,
+   #menu li span {
+   display: inline-block;
+   padding: 0em 1.5em;
+   text-decoration: none;
+   font-weight: 600;
+   text-transform: uppercase;
+   line-height: 60px;
+   }
+   #menu li a {
+   color: #FFF;
+   }
+   #menu li:hover a,
+   #menu li span {
+   background: #FFF;
+   color: #0074D9;
+   border-left: 1px solid #0074D9;
+   text-decoration: none;
+   }
+   h1 {
+   text-align: center;
+   margin-top: 100px;
+   }
+   .dev {
+   height: 300px;
+   text-align: right;
+   margin-top: -700px;
+   }
+   .name {
+   text-align: left;
+   margin-left: 650px;
+   }
+   .final {
+   background: #ede4ec;
+   padding: 80px;
+   border-radius: 20px;
+   margin: 40px;
+   }
+   p {
+   font-size: 34px;
+   font-family: Bold Fraktur Font;
+   }
+   .n2 {
+   font-size: 26px;
+   margin-top: -80px;
+   }
+   footer {
+   text-align: center;
+   padding: 5px;
+   background-color: Grey;
+   color: black;
+   margin-top: 50px;
+   }
+   .contact {
+   text-align: center;
+   border-width: 5px;
+   border-radius: 10px;
+   border-color: black;
+   border-style: solid;
+   padding: 20px;
+   font-size: 22px;
+   margin-left: 400px;
+   margin-right: 400px;
+   }
+</style>
+{% endblock %}
+{% block body %}
+<!-- Navbar -->
+<div id="top-header">
+   <!-- Logo -->
+   <div id="logo">
+      <img src="{{url_for('static', filename = 'logo/logofinal.png')}}" />
+   </div>
+   <!-- Navigation bar -->
+   <nav>
+      <div id="menu">
+         <ul>
+            <li class="active"><a href="{{url_for('main.home')}}">Home</a></li>
+            <li><a href="{{url_for('main.get_trip_data')}}">Schedule</a></li>
+            <li><a href="{{url_for('main.booking')}}">booking</a></li>
+            <li><a href="{{url_for('main.profile')}}">Profile</a></li>
+            <li><a href="{{url_for('main.about_us')}}">About Us</a></li>
+            <li><a href="{{url_for('auth.logout')}}">Log out</a></li>
+         </ul>
+      </div>
+   </nav>
+</div>
+<div class="final">
+   <div class="name">
+      <p><b>This website is developed by
+      <p> <br>
+      <div class="n2">
+         <ul style="list-style-type:circle;">
+            <li>Varada Rekhi</li>
+            <br>
+            <li>Shreya Nirmal </li>
+            <br>
+            <li>Rushikesh Pawar</li>
+            <br>
+            <li>Sonal Rane</li>
+         </ul>
+         <b>
+      </div>
+   </div>
+   <img src="{{url_for('static', filename = 'background/dev.jpeg')}}" class="dev">
+</div>
+<h1><u>Contact us</u></h1>
+<div class="contact">Contact us on <a href="travelmate@gmail.com">travelmate@gmail.com</a></div>
+<footer>
+   <b>All rights reserved | Terms and Conditions | Privacy Policy</b>
+</footer>
+{% endblock %}

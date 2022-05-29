@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>List</title>
+<style>
+/* body {
+  background-color: lightblue;
+} */
+</style>
+{% endblock %}
+
+
+
+
+
+
+{% block body %}
+<h1>hi heading ahe</h1>
+
+</br></br></br></br>
+
+<center>
+   <!-- <h2>Ithe Map disel</h2>  -->
+  
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.4560553531464!2d74.2047103154202!3d19.564952986809192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd01d040c5a5b3%3A0x14b72f0064bd5766!2sRangargalli%2C%20Sangamner%2C%20Maharashtra%20422605!5e0!3m2!1sen!2sin!4v1651654425303!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </center>
+
+{% for lat in lattitude %}
+
+    <h3>Lattitude -  {{lat}}</h3>
+
+{% endfor %}
+
+{% for long in longitude %}
+
+    <h3>Longitude -  {{long}}</h3>
+
+{% endfor %}
+
+
+{% endblock %}

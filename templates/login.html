@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Login Page</title>
+<style>
+  body {
+    background-image: url("static//background/main/img3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  h1 {
+    color: white;
+    font-family: all;
+    font-size: 220%;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  p {
+    font-size: 160%;
+    color: white;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  form {
+    background-color: transparent;
+    padding: 60px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2),
+      0 10px 25px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    margin-left: -700px;
+    margin-top: 30px;
+    text-align: left;
+    border-radius: 20px;
+  }
+
+  div {
+    
+    text-align: center;
+  }
+
+  button {
+    background-color: #1c2b5b;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px;
+  }
+
+  label {
+    color: #1c2b5b;
+    font-size: 20;
+  }
+
+  a {
+    color: #1c2b5b;
+    text-align: center;
+  }
+
+  input {
+    border-radius: 7px;
+    width: 200px;
+    height: 35px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    color: #1c2b5b;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: currentColor;
+  }
+
+  h4 {
+    color: #1c2b5b;
+    text-align: center;
+  }
+
+  .logo {
+    height: 100px;
+    width: 30%;
+    margin-left: 30px;
+  }
+
+  .google {
+    height: 40px;
+    width: 40px;
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<img src=" {{url_for('static', filename = '/logo/logofinal.png')}} " class="logo">
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}
+    </div>
+
+    <!-- <div class="alert alert-error alert-dismissible fade show" role="alert">
+      <span>{{ messages[0] }}</span>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true"> K </span>
+      </button>
+   </div> -->
+
+{% endif %}
+{% endwith %}
+<div style="display: block">
+   <form action="/login" method="POST">
+      <h1>Login</h1>
+      <label for="input_email" ><b>Email Id</b></label><br>
+      <input type="email" placeholder="Email Id" value="c@c" name="input_email" id="input_email" required autocomplete="off"><br><br><br>
+      <label for="input_password"><b>Password</b></label><br>
+      <input type="password" placeholder="Password" value="c" name="input_password"></br></br>
+      <div style="display: block" align="center">
+        <br><br><br> 
+        <button type="submit" class="RegisterButton" name="login">Login</button>
+         </br>
+         <!-- <h4>OR Login with</h4> -->
+         </br>
+         <!-- <img src="{{url_for('static', filename = '/logo/google.png')}}" class="google"> -->
+         <br><br>
+         </br>
+         <a href="{{url_for('auth.signup')}}" >Don't have an account?</a>
+      </div>
+   </form>
+</div>
+{% endblock %}

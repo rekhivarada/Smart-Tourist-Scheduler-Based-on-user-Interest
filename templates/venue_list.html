@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>List</title>
+<style>
+.content {
+  width : 97%; 
+}
+
+body {
+  background-color: lightblue;
+}
+
+ div.outset { 
+    border-style: outset;
+    
+}
+
+div.leftdiv
+  {
+     float: left;
+     margin: 0;
+     padding: 15px;
+  }
+
+.places {
+  padding: 15px;
+}
+        
+         div.rightdiv
+         {
+         float: right;
+         /* margin: 10; */
+         padding: 40px;
+         }
+</style>
+{% endblock %}
+
+{% block body %}
+<h1> place </h1>
+
+
+
+
+
+
+<form action="/store_venue" method="POST">
+
+  <div><button type="submit" class="btn btn-secondary btn-sm" name = "preferences">Submit</button> </div> 
+  <br><br><br> 
+
+  <div class="leftdiv">
+
+{% for place in venues %}
+
+          <div class="outset places">
+
+        
+            <label for={{place[0]}}> Add To the WishList:</label>
+            <input type="checkbox" id={{place[0]}} name={{place[0]}} value="True">
+            <h3>{{place[1]}}</h3>
+            <p>{{place[2]}}</p>
+            <img src={{place[3]}}>
+            <!-- <p>latt - {{place[4]}}</p>
+            <p>long - {{place[5]}}</p> -->
+          </div>
+
+
+
+{% endfor %}
+
+ </div>
+
+</form>
+
+</div>
+
+<!-- <div class="outset rightdiv">
+
+<h1> Budget Tracker </h1>
+    <div class="container">
+      <h4>Total Amount Spend</h4>
+      <h1 id="balance">Rs 0.00</h1>
+      <div class="inc-exp-container">
+        <div>
+          <h4>Total</h4>
+          <p id="money-plus" class="money-plus">
+            + Rs 0.00
+          </p>
+        </div>
+        
+      </div>
+
+      <h3>History</h3>
+      <ul id="list" class="list">
+        
+      </ul>
+      <h3>Add New Expense</h3>
+      <form action=""  methods="POST">
+          <div class="form-control">
+              <label for="text">Enter Category</label>
+              <input type="text" id="text" placeholder="Enter Text...."/>
+          </div>
+          <div class="form-control">
+              <label for="amount">Enter Amount <br></label>
+              <input type="number" id="amount" placeholder="Enter amount..."> 
+          </div>
+          <button class="btn">Add Expense</button>
+          <button class="submit" >Done</button>
+      </form>
+    </div>
+    
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+
+</div> -->
+
+</div>
+
+
+{% for cat in user_preferences %}
+
+<h4> {{cat}} </h4><br>
+
+{% endfor %}
+
+{% endblock %}
